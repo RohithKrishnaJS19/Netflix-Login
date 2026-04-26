@@ -1,0 +1,18 @@
+@import "tailwindcss"; 
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+.box1:hover{
+  animation: infinite 1s updown;
+}
+
+@keyframes updown
+{
+  0%,100%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-8px);
+  }
+}
