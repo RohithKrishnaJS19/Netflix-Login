@@ -13,6 +13,7 @@ app.get("/signup", function (req, res) {
     suser = req.query.suser
     spass = req.query.spass
     array.push({ name: suser, pass: spass })
+    res.send(true)
 })
 
 app.get("/login", function (req, res) {
@@ -26,6 +27,8 @@ app.get("/login", function (req, res) {
     res.send(result)
 })
 
-app.listen(3000, function () {
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function () {
     console.log("Server Started...")
 })

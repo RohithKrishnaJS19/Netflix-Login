@@ -11,7 +11,7 @@ function Signup() {
 
     function signup() {
         if (spass == confrim && suser.length > 0 && spass.length > 0 && confrim.length > 0) {
-            var signuserdetails = axios.get(`http://localhost:3000/signup?suser=${suser}&spass=${spass}`)
+            var signuserdetails = axios.get(`https://netflix-login-xh4m.onrender.com/signup?suser=${suser}&spass=${spass}`)
             navigate("/")
         }
         else {
