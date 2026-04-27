@@ -46,7 +46,7 @@ function App() {
         else {
             setwarn2(false)
         }
-        var userdetails = axios.get(`https://netflix-login-xh4m.onrender.com/login?user=${user}&pass=${pass}`)
+        var userdetails = axios.post("https://netflix-login-xh4m.onrender.com/login",{"user":user,"pass":pass})
         userdetails.then(function (data) {
             if (data.data) {
                 navigate("/demo")
